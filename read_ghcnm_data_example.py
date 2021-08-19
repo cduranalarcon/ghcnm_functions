@@ -5,7 +5,7 @@ Created on Thu Aug 19 16:20:05 2021
 
 @author:Claudio Duran-Alarcon
 """
-# Script to select and read ghcnm date by area and station code.
+# Script to select and read ghcnm data by area OR station code.
 
 import matplotlib.pyplot as plt
 from ghcnm_functions import *
