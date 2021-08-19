@@ -5,7 +5,7 @@ Created on Thu Aug 19 17:40:13 2021
 
 @author:Claudio Duran-Alarcon
 """
-# Script to select and read ghcnm date by area and station code.
+# Script to select and read ghcnm data by area OR station code.
 
 
 def select_stations(station_code   = None, 
