@@ -6,27 +6,27 @@ Function to read the Global Historical Climatology Network monthly (GHCNm) tempe
 
 ## Install ghcnm_search
 
-git clone https://github.com/cduranalarcon/ghcnm_search
+`git clone https://github.com/cduranalarcon/ghcnm_search`
 
 ## Usage (python3)
 
 ###  Search stations by --area
-python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv -o output/path/ -a minlat minlon maxlat maxlon 
+`python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv -o output/path/ -a minlat minlon maxlat maxlon` 
 
 ###  Search stations by --code
 
-python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv -o output/path/ -c AYXLT276695 AYXLT303433 AYXLT885346
+`python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv -o output/path/ -c AYXLT276695 AYXLT303433 AYXLT885346`
 
 ## Example
 
 ### Input
 
-python3 ghcnm_search.py -d ../../Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.dat -m ../..
-/Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.inv -o ../../Datasets/GHCNM/ -a -90 -180 -60 180
+`python3 ghcnm_search.py -d ../../Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.dat -m ../..
+/Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.inv -o ../../Datasets/GHCNM/ -a -90 -180 -60 180`
 
 ### Output
 
-###############################################################
+`###############################################################
 
 97 stations were found.
 
@@ -43,4 +43,4 @@ python3 ghcnm_search.py -d ../../Datasets/global-data/ghcnm.tavg.v4.0.1.20210818
 
 Output files were saved in  '/mnt/c/Users/human/Datasets/GHCNM'
 
-###############################################################
+###############################################################`
