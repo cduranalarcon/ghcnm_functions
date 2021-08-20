@@ -52,7 +52,7 @@ Output files were saved in  '/home/human/ghcnm_search/ghcnm_out'
 ## Help
 
 ```
-$python3 ghcnm_search.py -h
+$python ghcnm_search.py -h
 ```
 ```
 usage: ghcnm_search.py [-h] -d DATA_PATH -m METADATA_PATH [-o OUTPUT_PATH]
