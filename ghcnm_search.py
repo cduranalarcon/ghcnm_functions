@@ -80,13 +80,13 @@ def get_stations(selected_stns_fname,
     lines = txt.readlines()
     station_codes = np.array([l[:11] for l in lines])
 
-    for stn in range(np.size(stations['code'])):
+    for stn in range(np.size(stations['Code'])):
         
-        fname_out = path_out+stations['code'][stn]+'.csv'
+        fname_out = path_out+stations['Code'][stn]+'.csv'
         
         if os.path.isfile(fname_out) == False:
         
-            pix = np.squeeze(np.where(station_codes == stations['code'][stn]))
+            pix = np.squeeze(np.where(station_codes == stations['Code'][stn]))
 
             nyears = np.size(pix)
             date = []
