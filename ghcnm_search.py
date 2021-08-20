@@ -164,11 +164,11 @@ if __name__ == "__main__":
                                    ) 
         print("###############################################################")
         print(" ")
-        if np.size(stations.code) == 1:
-            print(np.size(stations.code), "station was found.")
+        if np.size(stations.Code) == 1:
+            print(np.size(stations.Code), "station was found.")
         else:
-            print(np.size(stations.code), "stations were found.")
-        if np.size(stations.code) > 0:
+            print(np.size(stations.Code), "stations were found.")
+        if np.size(stations.Code) > 0:
             print(" ")
             print(stations)
             print(" ")
