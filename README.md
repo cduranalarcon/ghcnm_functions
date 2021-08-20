@@ -90,5 +90,7 @@ or
 
 ```
 wget ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/v4/ghcnm.latest.qcu.tar.gz
+```
+```
 tar -xvf ghcnm.latest.qcu.tar.gz
 ```
