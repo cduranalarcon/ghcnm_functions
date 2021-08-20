@@ -89,7 +89,7 @@ Download the data from the website of the National Centers for Environmental Inf
 or 
 
 ```
-wget ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/v4/ghcnm.latest.qcu.tar.gz
+wget https://www.ncei.noaa.gov/pub/data/ghcn/v4/ghcnm.tavg.latest.qcu.tar.gz
 ```
 ```
 tar -xvf ghcnm.latest.qcu.tar.gz
