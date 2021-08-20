@@ -27,28 +27,25 @@ $python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to
 ### Input
 
 ```
-$python3 ghcnm_search.py -d ../../Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.dat -m ../..
-/Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.inv -o ../../Datasets/GHCNM/ -a -90 -180 -60 180
+$python ghcnm_search.py -d ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.dat -m ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.inv -a -70 -70 -60 -50
 ```
 
 ### Output
 ```
 ###############################################################
 
-97 stations were found.
+26 stations were found.
 
-           code elevation  latitude                         name
-0   AYM00088963      24.0  -63.4000               BASE_ESPERANZA
-1   AYM00088968       8.0  -60.7330                 BASE_ORCADAS
-2   AYM00089001      62.0  -70.3000               SANAE_SAF_BASE
-..          ...       ...       ...                          ...
-94  AYXLT885346      10.0  -63.3000                    O_HIGGINS
-95  AYXLT975160      40.0  -75.4200                      LIMBERT
-96  XXXLT848602    9999.0  -67.1700          ISLA_DE_PASCUA_EAST
+           Code Elevation  Latitude  Longitude                         Name
+0   AYM00088963      24.0   -63.400    -56.983               BASE_ESPERANZA
+1   AYM00089050      14.0   -62.183    -58.883           BELLINGSHAUSEN_AWS
+2   AYM00089053      11.0   -62.233    -58.633                  BASE_JUBANY
+...
+23  AYXLT546296      18.0   -63.500    -57.300                       PETREL
+24  AYXLT606419      26.0   -67.800    -68.900                     ADELAIDE
+25  AYXLT885346      10.0   -63.300    -57.900                    O_HIGGINS
 
-[97 rows x 4 columns]
-
-Output files were saved in  '/mnt/c/Users/human/Datasets/GHCNM'
+Output files were saved in  '/home/human/ghcnm_search/ghcnm_out'
 
 ###############################################################
 ```
