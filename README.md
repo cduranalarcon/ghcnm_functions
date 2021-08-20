@@ -27,7 +27,7 @@ $python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to
 ### Input
 
 ```
-$python ghcnm_search.py -d ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.dat -m ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.inv -a -70 -70 -60 -50
+$python3 ghcnm_search.py -d ../ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.dat -a -70 -70 -60 -50
 ```
 
 ### Output
@@ -55,7 +55,7 @@ Output files were saved in  '/home/human/ghcnm_search/ghcnm_out'
 $python ghcnm_search.py -h
 ```
 ```
-usage: ghcnm_search.py [-h] -d DATA_PATH -m METADATA_PATH [-o OUTPUT_PATH]
+usage: ghcnm_search.py [-h] -d DATA_PATH [-m METADATA_PATH] [-o OUTPUT_PATH]
                        [-s STATIONS_LIST] [-c CODES [CODES ...]]
                        [-a AREA [AREA ...]]
 
@@ -68,19 +68,22 @@ optional arguments:
                         (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)
   -m METADATA_PATH, --metadata_path METADATA_PATH
                         Filepath to ghcnm metadata
-                        (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv)
+                        (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given,
+                        --data_path with '.inv' extension is used as default
   -o OUTPUT_PATH, --output_path OUTPUT_PATH
                         Output filepath (default = 'ghcnm_out/')
   -s STATIONS_LIST, --stations_list STATIONS_LIST
-                        Name of the file containing the list selected stations (default = 'stations.csv')
+                        Name of the file containing the list selected stations
+                        (default = 'stations.csv')
   -c CODES [CODES ...], --codes CODES [CODES ...]
                         List of station codes within the ghcnm dataset [code1
                         code2 code3 code4 ...]. When --codes is provides,
-                        --area is not used.
+                        --area is not used
   -a AREA [AREA ...], --area AREA [AREA ...]
                         Geographic coordinates of the opposite vertices of a
                         rectangle [minlat minlon maxlat maxlon]
 ```
+
 ## GHCNm temperature dataset v4 access
 
 Download the data from the website of the National Centers for Environmental Information (NCEI) of NOAA: https://www.ncei.noaa.gov/pub/data/ghcn/v4/
