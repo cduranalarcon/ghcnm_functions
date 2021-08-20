@@ -46,15 +46,17 @@ def select_stations(station_code   = None,
                 elevation.append(line[3])
                 name.append(line[4])                
 
-    dic = {'code'      : code,
-           'latitude'  : latitude,
-           'elevation' : elevation,
-           'name'      : name,
+    dic = {
+           'Code'      : code,
+           'Latitude'  : latitude,
+           'Longitude'  : longitude,
+           'Elevation' : elevation,
+           'Name'      : name,
           }
 
     stations = pd.DataFrame(dic)
 
-    stations.to_csv(output_list,index = False)
+    stations.to_csv(output_list,index = False, columns = ['Code', 'Latitude', 'Longitude','Elevation','Name'])
     
     get_stations(output_list,data_fname = data_fname, path_out = output_path)
     
