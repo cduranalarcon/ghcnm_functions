@@ -7,7 +7,6 @@ Created on Thu Aug 19 17:40:13 2021
 """
 # Script to select and read ghcnm date by area and station code.
 
-
 def select_stations(station_code   = None, 
                     area           = [-90,-180,-60,180], 
                     metadata_fname = "ghcnm.tavg.v4.0.1.20210818.qcu.inv",
@@ -119,17 +118,16 @@ def read_date(fname):
     
     return(df)
 
-
 import argparse, os
 import numpy as np
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Tool to select and read ghcnm datasets by area OR station code")
     parser.add_argument("-d","--data_path", type=str, help="Filepath to ghcnm data (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)", required=True)
-    parser.add_argument("-m","--metadata_path", type=str, help="Filepath to ghcnm metadata (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv)", required=True)
-    parser.add_argument("-o","--output_path", type=str, help="Output filepath", default = 'ghcnm_out/')
-    parser.add_argument("-s","--stations_list", type=str, help="Name of the stations selected by area or a list of station code",default = 'stations.csv')
-    parser.add_argument("-c","--codes", type=str, nargs='+', help="List of station codes within the ghcnm dataset [code1 code2 code3 code4 ...]. When --codes is provides, --area is not used.")
+    parser.add_argument("-m","--metadata_path", type=str, help="Filepath to ghcnm metadata (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given, --data_path with '.inv' extension is used as default")
+    parser.add_argument("-o","--output_path", type=str, help="Output filepath (default = 'ghcnm_out/')", default = 'ghcnm_out/')
+    parser.add_argument("-s","--stations_list", type=str, help="Name of the file containing the list selected stations (default = 'stations.csv')", default = 'stations.csv')
+    parser.add_argument("-c","--codes", type=str, nargs='+', help="List of station codes within the ghcnm dataset [code1 code2 code3 code4 ...]. When --codes is provides, --area is not used")
     parser.add_argument("-a","--area", type=float, nargs='+', help="Geographic coordinates of the opposite vertices of a rectangle [minlat minlon maxlat maxlon]", default = [9999,9999,9999,9999])
     args = parser.parse_args()
 
@@ -145,14 +143,17 @@ if __name__ == "__main__":
         ## Selected by station code OR area
 
         data_path_abs = os.path.abspath(os.path.normpath(args.data_path))
-        metadata_path_abs = os.path.abspath(os.path.normpath(args.metadata_path))
+       
+        if args.metadata_path != None:
+          metadata_path_abs = os.path.abspath(os.path.normpath(args.metadata_path))
+        else:
+          metadata_path_abs = data_path_abs[:-3] + 'inv'
 
         if os.path.exists(os.path.normpath(args.output_path)) == False: os.mkdir(os.path.normpath(args.output_path))
         if os.path.exists(os.path.normpath(args.output_path) +  '/stations/') == False: os.mkdir(os.path.normpath(args.output_path) +  '/stations/')
         if os.path.exists(os.path.normpath(args.output_path) +  '/stations/') == False: os.mkdir(os.path.normpath(args.output_path) +  '/data/')
 
         os.chdir(os.path.normpath(args.output_path))
-
 
         stations = select_stations(
                                    station_code   = args.codes, 
