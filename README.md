@@ -2,7 +2,7 @@
 
 ## Description
 
-Function to read the Global Historical Climatology Network monthly (GHCNm) temperature dataset, selection data by station code or a rectangular geographic area.
+Function to read the Global Historical Climatology Network monthly (GHCNm) temperature dataset v4, selection data by station code or a rectangular geographic area. 
 
 ## Install ghcnm_search
 
@@ -85,3 +85,7 @@ optional arguments:
                         Geographic coordinates of the opposite vertices of a
                         rectangle [minlat minlon maxlat maxlon]
 ```
+## GHCNm) temperature dataset v4 access
+
+https://www.ncei.noaa.gov/pub/data/ghcn/v4/
+
