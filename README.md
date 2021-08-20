@@ -49,7 +49,7 @@ Output files were saved in  '/home/human/ghcnm_search/ghcnm_out'
 
 ###############################################################
 ```
-## help
+## Help
 
 ```
 $python3 ghcnm_search.py -h
