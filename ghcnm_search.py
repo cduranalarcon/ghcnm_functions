@@ -89,22 +89,25 @@ def get_stations(selected_stns_fname,
             nyears = np.size(pix)
             date = []
             T = []
+            QC = []
+            
             for l in np.array(lines)[pix]:
                 for m in range(12):
                     date.append(l[11:15]+'-'+str(m+1).zfill(2))
-
                     T.append(float(l[19+(m)*8:19+5+(m)*8])) 
+                    QC.append(l[26+(m)*8:26+1+(m)*8])
             T = np.array(T)  
             T = np.ma.masked_where(T == -9999, T)/100.
 
             dic = {
                    'Date [YYYY-MM]'      : date,
-                   'Temperature [°C]'    : T
+                   'Temperature [°C]'    : T,
+                   'QCFLAG'    : QC,
                   }
 
             data = pd.DataFrame(dic)
 
-            data.to_csv(fname_out,index = False, columns = ['Date [YYYY-MM]', 'Temperature [°C]'])
+            data.to_csv(fname_out,index = False, columns = ['Date [YYYY-MM]', 'Temperature [°C]', 'QCFLAG'])
     
 def read_date(fname):
     import pandas as pd
