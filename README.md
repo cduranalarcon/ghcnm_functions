@@ -89,3 +89,9 @@ optional arguments:
 
 Download the data from the website of the National Centers for Environmental Information (NCEI) of NOAA: https://www.ncei.noaa.gov/pub/data/ghcn/v4/
 
+or 
+
+```
+wget ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/v4/ghcnm.latest.qcu.tar.gz
+tar -xvf ghcnm.latest.qcu.tar.gz
+```
