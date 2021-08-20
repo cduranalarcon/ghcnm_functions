@@ -25,7 +25,7 @@ Function to read the Global Historical Climatology Network monthly (GHCNm) tempe
 /Datasets/global-data/ghcnm.tavg.v4.0.1.20210818.qcu.inv -o ../../Datasets/GHCNM/ -a -90 -180 -60 180`
 
 ### Output
-
+```
 ###############################################################
 
 97 stations were found.
@@ -44,7 +44,5 @@ Function to read the Global Historical Climatology Network monthly (GHCNm) tempe
 Output files were saved in  '/mnt/c/Users/human/Datasets/GHCNM'
 
 ###############################################################
-
-$ echo hello
-hello
+```
 
