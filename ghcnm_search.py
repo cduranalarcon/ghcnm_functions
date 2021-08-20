@@ -97,12 +97,14 @@ def get_stations(selected_stns_fname,
             T = np.array(T)  
             T = np.ma.masked_where(T == -9999, T)/100.
 
-            dic = {'date' : date,
-                   'T'    : T}
+            dic = {
+                   'Date [YYYY-MM]'      : date,
+                   'Temperature [°C]'    : T
+                  }
 
             data = pd.DataFrame(dic)
 
-            data.to_csv(fname_out,index = False)    
+            data.to_csv(fname_out,index = False, columns = ['Date [YYYY-MM]', 'Temperature [°C]'])
     
 def read_date(fname):
     import pandas as pd
