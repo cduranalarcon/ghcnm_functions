@@ -7,7 +7,7 @@ Function to read the Global Historical Climatology Network monthly (GHCNm) tempe
 ## Install ghcnm_search
 
 ```
-git clone https://github.com/cduranalarcon/ghcnm_search
+$git clone https://github.com/cduranalarcon/ghcnm_search
 ```
 
 ## Usage (python3)
