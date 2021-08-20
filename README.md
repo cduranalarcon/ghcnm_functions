@@ -85,7 +85,7 @@ optional arguments:
                         Geographic coordinates of the opposite vertices of a
                         rectangle [minlat minlon maxlat maxlon]
 ```
-## GHCNm) temperature dataset v4 access
+## GHCNm temperature dataset v4 access
 
-https://www.ncei.noaa.gov/pub/data/ghcn/v4/
+Download the data from the website of the National Centers for Environmental Information (NCEI) of NOAA: https://www.ncei.noaa.gov/pub/data/ghcn/v4/
 
