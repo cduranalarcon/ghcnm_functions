@@ -92,5 +92,5 @@ or
 wget https://www.ncei.noaa.gov/pub/data/ghcn/v4/ghcnm.tavg.latest.qcu.tar.gz
 ```
 ```
-tar -xvf ghcnm.latest.qcu.tar.gz
+tar -xvf ghcnm.tavg.latest.qcu.tar.gz
 ```
