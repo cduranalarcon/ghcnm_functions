@@ -27,7 +27,7 @@ $python ghcnm_search.py  -d path/to/ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat -m path/to
 ### Input
 
 ```
-$python3 ghcnm_search.py -d ../ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.dat -a -70 -70 -60 -50
+$python ghcnm_search.py -d ../ghcnm.v4.0.1.20210819/ghcnm.tavg.v4.0.1.20210819.qcu.dat -a -70 -70 -60 -50
 ```
 
 ### Output
