@@ -70,10 +70,9 @@ optional arguments:
                         Filepath to ghcnm metadata
                         (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv)
   -o OUTPUT_PATH, --output_path OUTPUT_PATH
-                        Output filepath
+                        Output filepath (default = 'ghcnm_out/')
   -s STATIONS_LIST, --stations_list STATIONS_LIST
-                        Name of the stations selected by area or a list of
-                        station code
+                        Name of the file containing the list selected stations (default = 'stations.csv')
   -c CODES [CODES ...], --codes CODES [CODES ...]
                         List of station codes within the ghcnm dataset [code1
                         code2 code3 code4 ...]. When --codes is provides,
