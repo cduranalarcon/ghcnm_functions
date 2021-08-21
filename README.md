@@ -2,7 +2,7 @@
 
 ## Description
 
-Function to read the Global Historical Climatology Network monthly (GHCNm) temperature dataset v4, selection data by station code or a rectangular geographic area. 
+Function to read the Global Historical Climatology Network monthly (GHCNm) temperature dataset v4, selecting data by station code or a rectangular geographic area. 
 
 ## Install ghcnm_search
 
@@ -83,7 +83,7 @@ optional arguments:
 
 ## GHCNm temperature dataset v4 access
 
-Download the data from the website of the National Centers for Environmental Information (NCEI) of NOAA: https://www.ncei.noaa.gov/pub/data/ghcn/v4/
+Download the data from the website of the National Centers for Environmental Information (NCEI), NOAA: https://www.ncei.noaa.gov/pub/data/ghcn/v4/
 
 or 
 
