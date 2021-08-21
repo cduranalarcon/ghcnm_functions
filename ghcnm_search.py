@@ -123,12 +123,12 @@ import numpy as np
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Tool to select and read ghcnm datasets by area OR station code")
-    parser.add_argument("-d","--data_path", type=str, help="Filepath to ghcnm data (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)", required=True)
-    parser.add_argument("-m","--metadata_path", type=str, help="Filepath to ghcnm metadata (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given, --data_path with '.inv' extension is used as default")
-    parser.add_argument("-o","--output_path", type=str, help="Output filepath (default = 'ghcnm_out/')", default = 'ghcnm_out/')
-    parser.add_argument("-s","--stations_list", type=str, help="Name of the file containing the list selected stations (default = 'stations.csv')", default = 'stations.csv')
-    parser.add_argument("-c","--codes", type=str, nargs='+', help="List of station codes within the ghcnm dataset [code1 code2 code3 code4 ...]. When --codes is provides, --area is not used")
-    parser.add_argument("-a","--area", type=float, nargs='+', help="Geographic coordinates of the opposite vertices of a rectangle [minlat minlon maxlat maxlon]", default = [9999,9999,9999,9999])
+    parser.add_argument("-d","--data_path", metavar='\b', type=str, help="Filepath to ghcnm data (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)", required=True)
+    parser.add_argument("-m","--metadata_path", metavar='\b', type=str, help="Filepath to ghcnm metadata (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given, --data_path with '.inv' extension is used as default")
+    parser.add_argument("-o","--output_path", metavar='\b', type=str, help="Output filepath (default = 'ghcnm_out/')", default = 'ghcnm_out/')
+    parser.add_argument("-s","--stations_list", metavar='\b', type=str, help="Name of the file containing the list selected stations (default = 'stations.csv')", default = 'stations.csv')
+    parser.add_argument("-c","--codes", metavar='\b', type=str, nargs='+', help="List of station codes within the ghcnm dataset [code1 code2 code3 code4 ...]. When --codes is provides, --area is not used")
+    parser.add_argument("-a","--area", metavar='\b', type=float, nargs='+', help="Geographic coordinates of the opposite vertices of a rectangle [minlat minlon maxlat maxlon]", default = [9999,9999,9999,9999])
     args = parser.parse_args()
 
     missing_args = False
