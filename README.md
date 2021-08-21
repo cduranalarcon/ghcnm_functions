@@ -52,31 +52,29 @@ Output files were saved in  '/home/human/ghcnm_search/ghcnm_out'
 $python ghcnm_search.py -h
 ```
 ```
-usage: ghcnm_search.py [-h] -d DATA_PATH [-m METADATA_PATH] [-o OUTPUT_PATH]
-                       [-s STATIONS_LIST] [-c CODES [CODES ...]]
-                       [-a AREA [AREA ...]]
+usage: ghcnm_search.py [-h] -d [-m] [-o] [-s] [-c  ...]]
+                       [-a  ...]]
 
 Tool to select and read ghcnm datasets by area OR station code
 
 optional arguments:
   -h, --help            show this help message and exit
-  -d DATA_PATH, --data_path DATA_PATH
-                        Filepath to ghcnm data
+  -d, --data_path   Filepath to ghcnm data
                         (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)
-  -m METADATA_PATH, --metadata_path METADATA_PATH
+  -m, --metadata_path
                         Filepath to ghcnm metadata
                         (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given,
                         --data_path with '.inv' extension is used as default
-  -o OUTPUT_PATH, --output_path OUTPUT_PATH
+  -o, --output_path
                         Output filepath (default = 'ghcnm_out/')
-  -s STATIONS_LIST, --stations_list STATIONS_LIST
+  -s, --stations_list
                         Name of the file containing the list selected stations
                         (default = 'stations.csv')
-  -c CODES [CODES ...], --codes CODES [CODES ...]
+  -c  ...], --codes  ...]
                         List of station codes within the ghcnm dataset [code1
                         code2 code3 code4 ...]. When --codes is provides,
                         --area is not used
-  -a AREA [AREA ...], --area AREA [AREA ...]
+  -a  ...], --area  ...]
                         Geographic coordinates of the opposite vertices of a
                         rectangle [minlat minlon maxlat maxlon]
 ```
