@@ -52,31 +52,23 @@ Output files were saved in  '/home/human/ghcnm_search/ghcnm_out'
 $python ghcnm_search.py -h
 ```
 ```
-usage: ghcnm_search.py [-h] -d [-m] [-o] [-s] [-c  ...]]
-                       [-a  ...]]
+usage: ghcnm_search.py [-h] -d [-m] [-o] [-s] [-c  ...]] [-a  ...]]
 
 Tool to select and read ghcnm datasets by area OR station code
 
 optional arguments:
   -h, --help            show this help message and exit
-  -d, --data_path   Filepath to ghcnm data
-                        (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)
+  -d, --data_path   Filepath to ghcnm data (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.dat)
   -m, --metadata_path
-                        Filepath to ghcnm metadata
-                        (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given,
-                        --data_path with '.inv' extension is used as default
+                        Filepath to ghcnm metadata (ghcnm.tavg.vn.y.z.YYYMMDD.qcu.inv). If not given, --data_path with '.inv' extension is used as default
   -o, --output_path
                         Output filepath (default = 'ghcnm_out/')
   -s, --stations_list
-                        Name of the file containing the list selected stations
-                        (default = 'stations.csv')
+                        Name of the file containing the list selected stations (default = 'stations.csv')
   -c  ...], --codes  ...]
-                        List of station codes within the ghcnm dataset [code1
-                        code2 code3 code4 ...]. When --codes is provides,
-                        --area is not used
+                        List of station codes within the ghcnm dataset [code1 code2 code3 code4 ...]. When --codes is provides, --area is not used
   -a  ...], --area  ...]
-                        Geographic coordinates of the opposite vertices of a
-                        rectangle [minlat minlon maxlat maxlon]
+                        Geographic coordinates of the opposite vertices of a rectangle [minlat minlon maxlat maxlon]
 ```
 
 ## GHCNm temperature dataset v4 access
